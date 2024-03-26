@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default ({ data, todoList }) => {
+const ListItem = ({ data, todoList }) => {
 
     const [edit, setEdit] = useState(false);
     const [todo, setTodo] = useState(data);
@@ -20,7 +20,7 @@ export default ({ data, todoList }) => {
                     } else {
                         setEdit(true)
                     }
-                }}> {edit ? 'done' : 'edit'}
+                }} > {edit ? 'done' : 'edit'}
 
             </button>
             <button
@@ -35,3 +35,5 @@ export default ({ data, todoList }) => {
         </li>
     )
 }
+
+export default ListItem;
